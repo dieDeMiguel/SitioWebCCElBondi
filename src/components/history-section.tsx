@@ -33,9 +33,9 @@ export function HistorySection({
         </div>
         <div className="flex-1">
           <div className="w-full max-w-[497px] space-y-8">
-            {items.map((item) => (
+            {items.map((item, index) => (
               <div
-                key={`${item.title}-${item.date}`}
+                key={`${item.title}-${item.date}-${index}`}
                 className="flex items-start gap-6"
               >
                 <span className="mt-2 h-[11px] w-[11px] flex-none rounded-full bg-white" />
