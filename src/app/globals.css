@@ -5,6 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Brand Colors - El Bondi */
+  --color-bondi-purple: #8B2E8B;
+  --color-bondi-purple-dark: #6B2269;
+  --color-bondi-purple-light: #A84DA8;
+  --color-bondi-cyan: #1B9AAA;
+  --color-bondi-dark: #1A1A2E;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
