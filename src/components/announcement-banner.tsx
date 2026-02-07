@@ -12,7 +12,7 @@ export function AnnouncementBanner({
   linkHref = "/tickets",
 }: AnnouncementBannerProps) {
   return (
-    <div className="bg-bondi-purple px-4 py-2 text-center text-sm text-white">
+    <div className="bg-bondi-purple px-4 py-1.5 text-center text-xs text-white sm:text-sm">
       <p>
         {message}{" "}
         {linkText && linkHref && (

@@ -39,7 +39,7 @@ export function ContentSection({
 
   return (
     <section className="w-full bg-white py-12">
-      <div className="mx-auto max-w-7xl px-8 lg:px-12">
+      <div className="mx-auto max-w-[1430px] px-6 sm:px-8 lg:px-12">
         {/* Decorative Title */}
         <div className="mb-10 flex justify-center">
           <Image
@@ -65,6 +65,7 @@ export function ContentSection({
         {totalPages > 1 && (
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
+              type="button"
               onClick={goToPrevious}
               className="hidden rounded-full p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 sm:block"
               aria-label="Anterior"
@@ -73,22 +74,26 @@ export function ContentSection({
             </button>
 
             <div className="flex gap-2">
-              {Array.from({ length: totalPages }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToPage(index)}
-                  className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                    currentPage === index
-                      ? "bg-bondi-cyan"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  aria-label={`Ir a página ${index + 1}`}
-                  aria-current={currentPage === index ? "page" : undefined}
-                />
-              ))}
+              {Array.from({ length: totalPages }, (_, page) => page).map(
+                (page) => (
+                  <button
+                    type="button"
+                    key={`page-${page}`}
+                    onClick={() => goToPage(page)}
+                    className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                      currentPage === page
+                        ? "bg-bondi-cyan"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                    aria-label={`Ir a página ${page + 1}`}
+                    aria-current={currentPage === page ? "page" : undefined}
+                  />
+                ),
+              )}
             </div>
 
             <button
+              type="button"
               onClick={goToNext}
               className="hidden rounded-full p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 sm:block"
               aria-label="Siguiente"
