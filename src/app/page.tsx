@@ -1,6 +1,80 @@
 import { Header } from "@/components/header";
 import { AnnouncementBanner } from "@/components/announcement-banner";
 import { Hero } from "@/components/hero";
+import { ContentSection } from "@/components/content-section";
+import { SectionDivider } from "@/components/section-divider";
+import type { EventCardProps } from "@/components/event-card";
+
+// Sample data - replace with real data from CMS/API
+const eventosData: EventCardProps[] = [
+  {
+    image: "/eventos/variete.jpg",
+    title: "Varieté Bajo las Estrellas",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/eventos/variete-bajo-las-estrellas",
+  },
+  {
+    image: "/eventos/acrobacia.jpg",
+    title: "Noche de Acrobacia",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/eventos/noche-acrobacia",
+  },
+  {
+    image: "/eventos/musica.jpg",
+    title: "Pitu Rock en Vivo",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/eventos/pitu-rock",
+  },
+  {
+    image: "/eventos/suspendido.jpg",
+    title: "A la Canasta - Suspendido",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/eventos/a-la-canasta",
+  },
+];
+
+const talleresData: EventCardProps[] = [
+  {
+    image: "/talleres/teatro.jpg",
+    title: "Taller de Teatro",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/talleres/teatro",
+  },
+  {
+    image: "/talleres/charla.jpg",
+    title: "Charlas Comunitarias",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/talleres/charlas",
+  },
+  {
+    image: "/talleres/boda.jpg",
+    title: "Eventos Especiales",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/talleres/eventos-especiales",
+  },
+  {
+    image: "/talleres/variete.jpg",
+    title: "Varieté",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+    date: "At vero eos et accusam",
+    href: "/talleres/variete",
+  },
+];
 
 export default function Home() {
   return (
@@ -15,6 +89,23 @@ export default function Home() {
         <Hero
           posterImage="/hero-background.jpg"
           videoUrl="https://www.youtube.com/embed/VIDEO_ID"
+        />
+
+        {/* Eventos y Novedades Section */}
+        <ContentSection
+          titleImage="/titles/eventos-y-novedades.png"
+          titleAlt="Eventos y Novedades"
+          items={eventosData}
+        />
+
+        {/* Divider */}
+        <SectionDivider />
+
+        {/* Talleres y Bachillerato Section */}
+        <ContentSection
+          titleImage="/titles/talleres-y-bachillerato.png"
+          titleAlt="Talleres y Bachillerato"
+          items={talleresData}
         />
       </main>
     </div>
