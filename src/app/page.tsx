@@ -5,6 +5,7 @@ import { ContentSection } from "@/components/content-section";
 import { HistorySection } from "@/components/history-section";
 import { RadioMapSection } from "@/components/radio-map-section";
 import { SectionDivider } from "@/components/section-divider";
+import { Footer } from "@/components/footer";
 import type { EventCardProps } from "@/components/event-card";
 
 // Sample data - replace with real data from CMS/API
@@ -156,6 +157,7 @@ export default function Home() {
 
         <RadioMapSection />
       </main>
+      <Footer />
     </div>
   );
 }
