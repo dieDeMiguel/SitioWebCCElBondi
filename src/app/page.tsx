@@ -81,39 +81,34 @@ const talleresData: EventCardProps[] = [
 
 const historiaData = [
   {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
+    title: "Fundacion del Colectivo Cultural / El Bondi",
+    date: "2009",
+    description:
+      "El proyecto nace bajo el nombre de Colectivo Cultural, una ONG sin fines de lucro fundada alrededor de agosto de 2009 con el objetivo de promover la integracion social, el respeto por los Derechos Humanos y el cuidado del medio ambiente mediante actividades culturales y artisticas en Ingeniero Maschwitz.",
   },
   {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
+    title: "Construccion comunitaria y actividades culturales continuas",
+    date: "Primera decada",
+    description:
+      "Desde sus comienzos, El Bondi se consolida como un espacio que ofrece multiples actividades sociales y culturales: talleres artisticos, teatro comunitario, danza, musica y otros cursos abiertos a la comunidad con modalidad de entrada libre y a conciencia.",
   },
   {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
+    title: "FM Radio Activa Comunitaria 96.9",
+    date: "Radio comunitaria",
+    description:
+      "La radio comunitaria FM RadioActiva 96.9 se establece dentro del Centro Cultural El Bondi, convirtiendose en la primera radio comunitaria de Ingeniero Maschwitz, promoviendo la diversidad local, la participacion sociocomunitaria y la pluralidad de voces.",
   },
   {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
+    title: "Eventos y actividades comunitarias regulares",
+    date: "Agenda cultural",
+    description:
+      "El Bondi potencia su rol de espacio social con agendas de actividades culturales periodicas: ciclos de teatro, cine, espectaculos para distintas edades, actividades por fechas conmemorativas y talleres especiales que integran a la comunidad local mas alla de lo artistico.",
   },
   {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
-  },
-  {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
-  },
-  {
-    title: "Taller cuerda balance",
-    date: "12.01.2025",
-    description: "At vero eos et accusam et justo duo dolores et ea rebum.",
+    title: 'Festival "Flor de Pena" y crecimiento de convocatoria',
+    date: "2025",
+    description:
+      'El Centro Cultural El Bondi fue sede de la segunda edicion del festival "Flor de Pena" en 2025, una propuesta cultural que mezcla arte popular, danza y gastronomia, logrando una convocatoria significativa y consolidando su rol como punto de encuentro festivo de la comunidad.',
   },
 ];
 
