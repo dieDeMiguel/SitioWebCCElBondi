@@ -54,10 +54,11 @@ export function Header() {
         <Link href="/" className="shrink-0">
           <Image
             src="/logo.png"
-            alt="El Bondi - Centro Cultural Comunitario"
-            width={60}
-            height={60}
-            className="h-10 w-auto"
+            alt="Colectivo Cultural El Bondi - Centro Cultural Comunitario"
+            width={120}
+            height={120}
+            className="h-12 w-12 object-contain lg:h-14 lg:w-14"
+            priority
           />
         </Link>
 
