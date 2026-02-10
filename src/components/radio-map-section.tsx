@@ -4,7 +4,9 @@ import Image from "next/image";
 import {
   Facebook,
   Instagram,
+  MapPin,
   MoreHorizontal,
+  Navigation,
   Play,
   Volume2,
   Youtube,
@@ -14,6 +16,7 @@ export function RadioMapSection() {
   return (
     <section className="w-full bg-[#F0F1F4]">
       <div className="mx-auto flex w-full max-w-[1516px] flex-col gap-12 px-6 py-16 sm:px-10 lg:gap-16 lg:px-[74px]">
+        {/* Radio Section */}
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,570px)_minmax(0,1fr)]">
           <div className="flex justify-center lg:justify-start">
             <Image
@@ -56,14 +59,53 @@ export function RadioMapSection() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-xl">
-          <Image
-            src="/sections/mapa-colectivo.svg"
-            alt="Mapa de Colectivo Cultural"
-            width={1516}
-            height={700}
-            className="h-auto w-full"
-          />
+        {/* Interactive Map Section */}
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col items-center gap-2 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-3xl font-medium text-[#44546F] sm:text-4xl">
+                Ubicacion
+              </h2>
+              <div className="flex items-center justify-center gap-2 text-[#44546F]/80 lg:justify-start">
+                <MapPin className="h-4 w-4 shrink-0" />
+                <p className="text-sm font-medium sm:text-base">
+                  El Dorado 1518, Ingeniero Maschwitz, Buenos Aires, Argentina
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=-34.3878,-58.7467"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-bondi-purple px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-bondi-purple-dark"
+            >
+              <Navigation className="h-4 w-4" />
+              Como llegar
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <iframe
+              title="Ubicacion de Colectivo Cultural El Bondi - El Dorado 1518, Ingeniero Maschwitz"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-58.7517%2C-34.3918%2C-58.7417%2C-34.3838&layer=mapnik&marker=-34.3878%2C-58.7467"
+              width="100%"
+              height="500"
+              className="border-0 w-full"
+              loading="lazy"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-center text-xs text-[#44546F]/60">
+            {"Mapa proporcionado por "}
+            <a
+              href="https://www.openstreetmap.org/?mlat=-34.3878&mlon=-58.7467#map=17/-34.3878/-58.7467"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#44546F]"
+            >
+              OpenStreetMap
+            </a>
+            {" - Haz clic en el mapa para interactuar, hacer zoom y desplazarte."}
+          </p>
         </div>
       </div>
     </section>
