@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Play } from "lucide-react";
 
 interface HeroProps {
@@ -17,7 +16,7 @@ export function Hero({
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="relative h-[70vh] min-h-[520px] w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden" style={{ aspectRatio: "1512 / 700" }}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -27,59 +26,51 @@ export function Hero({
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-bondi-purple/30" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col justify-center px-6 py-10 lg:px-12">
-        <div className="max-w-2xl">
-          <div className="flex items-center gap-4">
+      <div className="relative z-10 flex h-full flex-col justify-between px-6 py-8 lg:px-16 lg:py-10">
+        {/* Top: Logo + Title */}
+        <div>
+          <div className="flex items-center gap-3">
             <Image
               src="/el-bondi-logo-white.png"
               alt="El Bondi"
               width={200}
               height={60}
-              className="h-auto w-36 lg:w-44"
+              className="h-auto w-32 lg:w-44"
             />
-            <div className="border-l-2 border-white/80 pl-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/90 lg:text-sm">
-                Centro Cultural Comunitario
+            <div className="border-l-2 border-white/80 pl-3">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white lg:text-xs">
+                Centro
               </p>
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/70 lg:text-sm">
-                El Bondi
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white lg:text-xs">
+                Cultural
+              </p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-white lg:text-xs">
+                Comunitario
               </p>
             </div>
           </div>
-          <h1 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Cultura, educación y comunicación que se viven en comunidad.
-          </h1>
-          <p className="mt-4 text-base text-white/90 sm:text-lg">
-            Un espacio abierto para crear, aprender y encontrarnos. Sumate a las
-            actividades, talleres y propuestas culturales de la semana.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <Link
-              href="/eventos"
-              className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-bondi-purple transition-colors hover:bg-white/90"
-            >
-              Ver agenda
-            </Link>
-            <Link
-              href="/centro-cultural/quienes-somos"
-              className="rounded-full border border-white/70 px-6 py-2 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
-            >
-              Conocé el centro
-            </Link>
-            <button
-              type="button"
-              onClick={() => setIsVideoPlaying(true)}
-              className="flex items-center gap-2 rounded-full border border-white/40 px-5 py-2 text-sm font-semibold text-white transition-colors hover:border-white/80 hover:bg-white/10"
-              aria-label="Reproducir video institucional"
-            >
-              <Play className="h-4 w-4" />
-              Ver video
-            </button>
+          <div className="mt-4 max-w-md">
+            <p className="text-sm text-white lg:text-base">
+              Derechos que se viven: cultura, educación y comunicación.
+            </p>
+            <div className="mt-2 h-0.5 w-full max-w-sm bg-white/60" />
           </div>
+        </div>
+
+        {/* Center: Play Button */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={() => setIsVideoPlaying(true)}
+            className="flex h-16 w-16 items-center justify-center rounded-full bg-white/30 text-white backdrop-blur-sm transition-colors hover:bg-white/50"
+            aria-label="Reproducir video institucional"
+          >
+            <Play className="h-7 w-7" fill="white" />
+          </button>
         </div>
       </div>
 
@@ -92,9 +83,7 @@ export function Hero({
             onClick={() => setIsVideoPlaying(false)}
             aria-label="Cerrar video"
           />
-          <div
-            className="relative aspect-video w-full max-w-4xl"
-          >
+          <div className="relative aspect-video w-full max-w-4xl">
             <button
               type="button"
               onClick={() => setIsVideoPlaying(false)}

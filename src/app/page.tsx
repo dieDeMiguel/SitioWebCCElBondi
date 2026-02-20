@@ -5,6 +5,7 @@ import { ContentSection } from "@/components/content-section";
 import { HistorySection } from "@/components/history-section";
 import { RadioMapSection } from "@/components/radio-map-section";
 import { SectionDivider } from "@/components/section-divider";
+import { ConcertBanner } from "@/components/concert-banner";
 import type { EventCardProps } from "@/components/event-card";
 
 // Sample data - replace with real data from CMS/API
@@ -80,7 +81,7 @@ const talleresData: EventCardProps[] = [
 
 const historiaData = [
   {
-    title: "Taller cuerda balance",
+    title: "Lorem ipsum",
     date: "12.01.2025",
     description: "At vero eos et accusam et justo duo dolores et ea rebum.",
   },
@@ -152,6 +153,12 @@ export default function Home() {
           titleImage="/titles/historia-del-lugar.png"
           titleAlt="Historia del Lugar"
           items={historiaData}
+        />
+
+        {/* Full-width Concert Photo */}
+        <ConcertBanner
+          image="/sections/concert-banner.jpg"
+          alt="Concierto en vivo en El Bondi"
         />
 
         <RadioMapSection />
