@@ -46,36 +46,36 @@ const eventosData: EventCardProps[] = [
 
 const talleresData: EventCardProps[] = [
   {
-    image: "/talleres/teatro.jpg",
+    image: "/talleres/orquesta.webp",
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/teatro",
+    href: "/talleres/orquesta",
   },
   {
-    image: "/talleres/charla.jpg",
+    image: "/talleres/tambor.webp",
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/charlas",
+    href: "/talleres/tambor",
   },
   {
-    image: "/talleres/boda.jpg",
+    image: "/talleres/cintia.webp",
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/eventos-especiales",
+    href: "/talleres/cintia",
   },
   {
-    image: "/talleres/variete.jpg",
+    image: "/talleres/radio.webp",
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/variete",
+    href: "/talleres/radio",
   },
 ];
 
