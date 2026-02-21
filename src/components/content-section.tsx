@@ -37,8 +37,8 @@ export function ContentSection({
           />
         </div>
 
-        {/* Cards Grid - in bordered container */}
-        <div className="rounded-lg border border-gray-200 bg-white p-6">
+        {/* Cards Grid */}
+        <div className="px-2">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {visibleItems.map((item, index) => (
               <EventCard key={`${item.title}-${index}`} {...item} />
