@@ -20,9 +20,9 @@ export function HistorySection({
   items,
 }: HistorySectionProps) {
   return (
-    <section className="w-full bg-[#74297E] py-16 lg:py-20">
-      <div className="mx-auto flex w-full max-w-[1512px] flex-col gap-10 px-6 sm:px-10 lg:flex-row lg:items-start lg:gap-12 lg:px-[74px]">
-        {/* Title Image - Left */}
+    <section className="w-full bg-[#74297E] py-16 lg:py-24">
+      <div className="mx-auto flex w-full max-w-[1512px] flex-col gap-10 px-6 sm:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-[74px]">
+        {/* Title Image - Left (692x386) */}
         <div className="flex flex-1 items-center justify-center lg:justify-start">
           <Image
             src={titleImage}
@@ -33,30 +33,32 @@ export function HistorySection({
           />
         </div>
 
-        {/* Timeline - Right */}
-        <div className="flex-1">
-          <div className="relative w-full max-w-[550px]">
+        {/* Timeline - Right (497x620 Hug) */}
+        <div className="w-full max-w-[497px] lg:flex-none">
+          <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-[5px] top-2 bottom-2 w-px bg-white/30" />
+            <div className="absolute left-[5px] top-3 bottom-3 w-px bg-white/40" />
 
-            <div className="space-y-6">
+            <div className="flex flex-col gap-10">
               {items.map((item, index) => (
                 <div
                   key={`${item.title}-${item.date}-${index}`}
-                  className="relative flex items-start gap-5 pl-0"
+                  className="relative flex items-start gap-5"
                 >
                   {/* Dot */}
-                  <span className="relative z-10 mt-1.5 h-[11px] w-[11px] flex-none rounded-full bg-white" />
+                  <span className="relative z-10 mt-1.5 h-[11px] w-[11px] flex-none rounded-full border-2 border-white bg-white/80" />
 
-                  {/* Content */}
-                  <div className="space-y-0.5">
+                  {/* Content (497 Fill x 44 Hug) */}
+                  <div>
                     <div className="flex flex-wrap items-baseline gap-2">
-                      <p className="text-sm font-bold text-white">
+                      <p className="text-base font-bold leading-snug text-white">
                         {item.title}
                       </p>
-                      <span className="text-xs text-white/60">{item.date}</span>
+                      <span className="text-sm text-white/60">{item.date}</span>
                     </div>
-                    <p className="text-sm text-white/80">{item.description}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-white/80">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
