@@ -120,12 +120,12 @@ const historiaData = [
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <Header />
       <AnnouncementBanner
-        message='¡Últimas novedades! Próximo Varite: "Circo, música en vivo y exposición de arte urbano" para la comunidad el 10 de enero de 2026. ¡Compra tus entradas aquí!'
+        message={'¡Últimas novedades! Próximo Varite: \u201CCirco, música en vivo y exposición de arte urbano\u201D para la comunidad el 10 de enero de 2026. ¡Compra tus entradas aquí!'}
         linkText="Tickets."
         linkHref="/tickets"
       />
-      <Header />
       <main>
         <Hero
           posterImage="/hero-background.jpg"

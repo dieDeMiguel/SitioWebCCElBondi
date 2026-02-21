@@ -12,13 +12,18 @@ export function AnnouncementBanner({
   linkHref = "/tickets",
 }: AnnouncementBannerProps) {
   return (
-    <div className="bg-bondi-purple px-4 py-1.5 text-center text-xs text-white sm:text-sm">
+    <div
+      className="flex h-[55px] items-center justify-center px-4 text-center text-sm text-white sm:text-base"
+      style={{
+        background: "linear-gradient(135deg, #9D1271 0%, #732B8F 100%)",
+      }}
+    >
       <p>
         {message}{" "}
         {linkText && linkHref && (
           <Link
             href={linkHref}
-            className="font-semibold underline underline-offset-2 hover:no-underline"
+            className="font-bold italic underline underline-offset-2 hover:no-underline"
           >
             {linkText}
           </Link>
