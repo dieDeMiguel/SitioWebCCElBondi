@@ -11,12 +11,12 @@ import type { EventCardProps } from "@/components/event-card";
 // Sample data - replace with real data from CMS/API
 const eventosData: EventCardProps[] = [
   {
-    image: "/eventos/variete.jpg",
+    image: "/eventos/danza.webp",
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/eventos/variete-bajo-las-estrellas",
+    href: "/eventos/danza",
   },
   {
     image: "/eventos/acrobacia.jpg",
@@ -35,12 +35,12 @@ const eventosData: EventCardProps[] = [
     href: "/eventos/pitu-rock",
   },
   {
-    image: "/eventos/suspendido.jpg",
+    image: "/eventos/zunino.webp",
     title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/eventos/a-la-canasta",
+    href: "/eventos/zunino",
   },
 ];
 
