@@ -14,14 +14,14 @@ export function RadioMapSection() {
   return (
     <section className="w-full bg-[#F0F1F4]">
       <div className="mx-auto flex w-full max-w-[1516px] flex-col gap-12 px-6 py-16 sm:px-10 lg:gap-16 lg:px-[74px]">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,570px)_minmax(0,1fr)]">
+        <div className="grid items-center gap-10 lg:grid-cols-[320px_minmax(0,1fr)]">
           <div className="flex justify-center lg:justify-start">
             <Image
               src="/sections/radio-activa-logo.png"
               alt="Radio Activa Comunitaria"
-              width={570}
-              height={451}
-              className="h-auto w-full max-w-[570px]"
+              width={320}
+              height={247}
+              className="h-auto w-[320px]"
             />
           </div>
           <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
