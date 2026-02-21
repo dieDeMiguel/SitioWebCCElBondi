@@ -155,10 +155,10 @@ export default function Home() {
           items={historiaData}
         />
 
-        {/* Full-width Concert Photo */}
+        {/* Full-width Community Photo */}
         <ConcertBanner
           image="/sections/concert-banner.jpg"
-          alt="Concierto en vivo en El Bondi"
+          alt="Foto grupal de la comunidad de El Bondi"
         />
 
         <RadioMapSection />
