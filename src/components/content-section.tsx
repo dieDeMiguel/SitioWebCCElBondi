@@ -26,8 +26,8 @@ export function ContentSection({
   return (
     <section className="w-full bg-white py-10">
       <div className="mx-auto max-w-[1430px] px-6 sm:px-8 lg:px-12">
-        {/* Decorative Title - centered in its own container */}
-        <div className="mx-auto mb-10 flex max-w-[488px] justify-center rounded-lg border border-gray-200 bg-white p-6">
+        {/* Decorative Title - centered, no border */}
+        <div className="mx-auto mb-10 flex max-w-[488px] justify-center">
           <Image
             src={titleImage}
             alt={titleAlt}
