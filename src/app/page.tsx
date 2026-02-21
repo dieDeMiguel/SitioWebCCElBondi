@@ -128,7 +128,7 @@ export default function Home() {
       />
       <main>
         <Hero
-          posterImage="/hero-background.jpg"
+          posterImage="/andy-hero.webp"
           videoUrl="https://www.youtube.com/embed/VIDEO_ID"
         />
 

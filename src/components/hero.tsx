@@ -35,7 +35,7 @@ export function Hero({
         <div>
           <div className="flex items-center gap-3">
             <Image
-              src="/el-bondi-logo-white.png"
+              src="/el-bondi-logo-blanco.png"
               alt="El Bondi"
               width={200}
               height={60}
