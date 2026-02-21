@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 
-const primaryNavItems = [
+const navItems = [
   {
     label: "Centro Cultural",
     href: "#",
@@ -35,9 +35,6 @@ const primaryNavItems = [
     ],
   },
   { label: "Clases Regulares", href: "/clases" },
-];
-
-const moreNavItems = [
   { label: "Blog", href: "/blog" },
   { label: "Radio", href: "/radio" },
   { label: "Ofertas", href: "/ofertas" },
@@ -49,25 +46,27 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-8">
-        {/* Logo */}
+      {/* Main nav bar - Figma: 1512 x 86px */}
+      <nav className="mx-auto flex h-[86px] max-w-[1512px] items-center justify-between px-6 lg:px-10">
+        {/* Logo - circular, ~70px */}
         <Link href="/" className="shrink-0">
           <Image
             src="/logo.png"
-            alt="El Bondi - Centro Cultural Comunitario"
-            width={60}
-            height={60}
-            className="h-10 w-auto"
+            alt="Colectivo Cultural"
+            width={70}
+            height={70}
+            className="h-[70px] w-[70px] rounded-full object-cover"
+            priority
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden xl:flex xl:items-center xl:gap-1">
-          {primaryNavItems.map((item) => (
+        {/* Desktop Navigation - Figma: 1126 x 36 Hug */}
+        <div className="hidden xl:flex xl:items-center xl:gap-2">
+          {navItems.map((item) => (
             <div key={item.label} className="relative group">
               <Link
                 href={item.href}
-                className="flex items-center gap-1 px-2.5 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-bondi-purple"
+                className="flex items-center gap-1 px-3 py-2 text-base font-medium text-gray-800 transition-colors hover:text-bondi-purple"
               >
                 {item.label}
                 {item.hasDropdown && <ChevronDown className="h-4 w-4" />}
@@ -87,33 +86,15 @@ export function Header() {
               )}
             </div>
           ))}
-          <div className="relative group">
-            <button
-              type="button"
-              className="flex items-center gap-1 px-2.5 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-bondi-purple"
-              aria-haspopup="true"
-            >
-              Más
-              <ChevronDown className="h-4 w-4" />
-            </button>
-            <div className="invisible absolute left-0 top-full min-w-44 rounded-md bg-white py-2 opacity-0 shadow-lg ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              {moreNavItems.map((subItem) => (
-                <Link
-                  key={subItem.label}
-                  href={subItem.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-bondi-purple"
-                >
-                  {subItem.label}
-                </Link>
-              ))}
-            </div>
-          </div>
         </div>
 
-        {/* CTA Button */}
+        {/* Donar Button - Figma: 106 x 40px, gradient #9D1271 → #732B8F */}
         <Link
           href="/donar"
-          className="hidden rounded-full bg-bondi-purple px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-bondi-purple-dark xl:block"
+          className="hidden h-10 w-[106px] items-center justify-center rounded-full text-base font-semibold text-white transition-opacity hover:opacity-90 xl:flex"
+          style={{
+            background: "linear-gradient(135deg, #9D1271 0%, #732B8F 100%)",
+          }}
         >
           Donar
         </Link>
@@ -123,6 +104,7 @@ export function Header() {
           type="button"
           className="xl:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Cerrar menu" : "Abrir menu"}
         >
           {mobileMenuOpen ? (
             <X className="h-6 w-6 text-gray-700" />
@@ -136,7 +118,7 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="xl:hidden">
           <div className="space-y-1 px-4 pb-4">
-            {primaryNavItems.map((item) => (
+            {navItems.map((item) => (
               <div key={item.label}>
                 <Link
                   href={item.href}
@@ -161,24 +143,12 @@ export function Header() {
                 )}
               </div>
             ))}
-            <div>
-              <p className="pt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Más
-              </p>
-              {moreNavItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="block py-2 text-base font-medium text-gray-700 hover:text-bondi-purple"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
             <Link
               href="/donar"
-              className="mt-4 block rounded-full bg-bondi-purple px-6 py-2 text-center text-sm font-semibold text-white"
+              className="mt-4 flex h-10 items-center justify-center rounded-full text-center text-base font-semibold text-white"
+              style={{
+                background: "linear-gradient(135deg, #9D1271 0%, #732B8F 100%)",
+              }}
               onClick={() => setMobileMenuOpen(false)}
             >
               Donar

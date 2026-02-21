@@ -20,36 +20,49 @@ export function HistorySection({
   items,
 }: HistorySectionProps) {
   return (
-    <section className="w-full bg-[#74297E] py-16 lg:min-h-[700px] lg:py-20">
-      <div className="mx-auto flex w-full max-w-[1512px] flex-col gap-10 px-6 sm:px-10 lg:flex-row lg:items-center lg:gap-12 lg:px-[74px]">
-        <div className="flex-1">
+    <section className="w-full bg-[#74297E] py-16 lg:py-24">
+      <div className="mx-auto flex w-full max-w-[1512px] flex-col gap-10 px-6 sm:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-[74px]">
+        {/* Title Image - Left (692x386) */}
+        <div className="flex flex-1 items-center justify-center lg:justify-start">
           <Image
             src={titleImage}
             alt={titleAlt}
             width={692}
             height={386}
-            className="h-auto w-full max-w-[692px]"
+            className="h-auto w-full max-w-[500px] lg:max-w-[692px]"
           />
         </div>
-        <div className="flex-1">
-          <div className="w-full max-w-[497px] space-y-8">
-            {items.map((item) => (
-              <div
-                key={`${item.title}-${item.date}`}
-                className="flex items-start gap-6"
-              >
-                <span className="mt-2 h-[11px] w-[11px] flex-none rounded-full bg-white" />
-                <div className="space-y-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <p className="text-sm font-semibold text-white">
-                      {item.title}
+
+        {/* Timeline - Right (497x620 Hug) */}
+        <div className="w-full max-w-[497px] lg:flex-none">
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-[5px] top-3 bottom-3 w-px bg-white/40" />
+
+            <div className="flex flex-col gap-10">
+              {items.map((item, index) => (
+                <div
+                  key={`${item.title}-${item.date}-${index}`}
+                  className="relative flex items-start gap-5"
+                >
+                  {/* Dot */}
+                  <span className="relative z-10 mt-1.5 h-[11px] w-[11px] flex-none rounded-full border-2 border-white bg-white/80" />
+
+                  {/* Content (497 Fill x 44 Hug) */}
+                  <div>
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <p className="text-base font-bold leading-snug text-white">
+                        {item.title}
+                      </p>
+                      <span className="text-sm text-white/60">{item.date}</span>
+                    </div>
+                    <p className="mt-1 text-sm leading-relaxed text-white/80">
+                      {item.description}
                     </p>
-                    <span className="text-xs text-white/60">{item.date}</span>
                   </div>
-                  <p className="text-sm text-white/90">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

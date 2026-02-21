@@ -5,21 +5,22 @@ import { ContentSection } from "@/components/content-section";
 import { HistorySection } from "@/components/history-section";
 import { RadioMapSection } from "@/components/radio-map-section";
 import { SectionDivider } from "@/components/section-divider";
+import { ConcertBanner } from "@/components/concert-banner";
 import type { EventCardProps } from "@/components/event-card";
 
 // Sample data - replace with real data from CMS/API
 const eventosData: EventCardProps[] = [
   {
-    image: "/eventos/variete.jpg",
-    title: "Varieté Bajo las Estrellas",
+    image: "/eventos/danza.webp",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/eventos/variete-bajo-las-estrellas",
+    href: "/eventos/danza",
   },
   {
     image: "/eventos/acrobacia.jpg",
-    title: "Noche de Acrobacia",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -27,60 +28,60 @@ const eventosData: EventCardProps[] = [
   },
   {
     image: "/eventos/musica.jpg",
-    title: "Pitu Rock en Vivo",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
     href: "/eventos/pitu-rock",
   },
   {
-    image: "/eventos/suspendido.jpg",
-    title: "A la Canasta - Suspendido",
+    image: "/eventos/zunino.webp",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/eventos/a-la-canasta",
+    href: "/eventos/zunino",
   },
 ];
 
 const talleresData: EventCardProps[] = [
   {
-    image: "/talleres/teatro.jpg",
-    title: "Taller de Teatro",
+    image: "/talleres/orquesta.webp",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/teatro",
+    href: "/talleres/orquesta",
   },
   {
-    image: "/talleres/charla.jpg",
-    title: "Charlas Comunitarias",
+    image: "/talleres/tambor.webp",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/charlas",
+    href: "/talleres/tambor",
   },
   {
-    image: "/talleres/boda.jpg",
-    title: "Eventos Especiales",
+    image: "/talleres/cintia.webp",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/eventos-especiales",
+    href: "/talleres/cintia",
   },
   {
-    image: "/talleres/variete.jpg",
-    title: "Varieté",
+    image: "/talleres/radio.webp",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
-    href: "/talleres/variete",
+    href: "/talleres/radio",
   },
 ];
 
 const historiaData = [
   {
-    title: "Taller cuerda balance",
+    title: "Lorem ipsum",
     date: "12.01.2025",
     description: "At vero eos et accusam et justo duo dolores et ea rebum.",
   },
@@ -119,15 +120,15 @@ const historiaData = [
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <Header />
       <AnnouncementBanner
-        message='¡Últimas novedades! Próximo Varite: "Circo, música en vivo y exposición de arte urbano" para la comunidad el 10 de enero de 2026. ¡Compra tus entradas aquí!'
+        message={'¡Últimas novedades! Próximo Varite: \u201CCirco, música en vivo y exposición de arte urbano\u201D para la comunidad el 10 de enero de 2026. ¡Compra tus entradas aquí!'}
         linkText="Tickets."
         linkHref="/tickets"
       />
-      <Header />
       <main>
         <Hero
-          posterImage="/hero-background.jpg"
+          posterImage="/andy-hero.webp"
           videoUrl="https://www.youtube.com/embed/VIDEO_ID"
         />
 
@@ -152,6 +153,12 @@ export default function Home() {
           titleImage="/titles/historia-del-lugar.png"
           titleAlt="Historia del Lugar"
           items={historiaData}
+        />
+
+        {/* Full-width Community Photo */}
+        <ConcertBanner
+          image="/sections/concert-banner.jpg"
+          alt="Foto grupal de la comunidad de El Bondi"
         />
 
         <RadioMapSection />

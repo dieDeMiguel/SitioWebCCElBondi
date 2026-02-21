@@ -14,14 +14,15 @@ export function RadioMapSection() {
   return (
     <section className="w-full bg-[#F0F1F4]">
       <div className="mx-auto flex w-full max-w-[1516px] flex-col gap-12 px-6 py-16 sm:px-10 lg:gap-16 lg:px-[74px]">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,570px)_minmax(0,1fr)]">
-          <div className="flex justify-center lg:justify-start">
+        {/* Radio Section */}
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center">
+          <div className="flex-shrink-0">
             <Image
               src="/sections/radio-activa-logo.png"
               alt="Radio Activa Comunitaria"
-              width={570}
-              height={451}
-              className="h-auto w-full max-w-[570px]"
+              width={320}
+              height={247}
+              className="h-auto w-[320px]"
             />
           </div>
           <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
@@ -29,9 +30,9 @@ export function RadioMapSection() {
               Radio Activa Comunitaria
             </h2>
             <p className="max-w-xl text-base font-medium text-[#44546F]">
-              Llevá RadioActiva Comunitaria FM 96.9 con vos, estés donde estés.
+              Llev&aacute; RadioActiva Comunitaria FM 96.9 con vos, est&eacute;s donde est&eacute;s.
               Escuchanos en vivo desde cualquier parte del mundo haciendo clic
-              en nuestro enlace a continuación.
+              en nuestro enlace a continuaci&oacute;n.
             </p>
             <div className="flex w-full max-w-xl items-center gap-3 rounded-full bg-[#44546F]/40 px-4 py-3 text-sm text-white">
               <button
@@ -56,13 +57,18 @@ export function RadioMapSection() {
           </div>
         </div>
 
+        {/* Google Maps Embed */}
         <div className="overflow-hidden rounded-xl">
-          <Image
-            src="/sections/mapa-colectivo.svg"
-            alt="Mapa de Colectivo Cultural"
-            width={1516}
-            height={700}
-            className="h-auto w-full"
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.621502402451!2d-58.738981696131326!3d-34.384269607233875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca020ac504509%3A0x833d3f16e58256b4!2sColectivo%20Cultural!5e0!3m2!1sen!2sde!4v1771652883202!5m2!1sen!2sde"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Mapa de Colectivo Cultural"
+            className="w-full"
           />
         </div>
       </div>
