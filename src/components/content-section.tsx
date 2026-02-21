@@ -26,27 +26,29 @@ export function ContentSection({
   return (
     <section className="w-full bg-white py-10">
       <div className="mx-auto max-w-[1430px] px-6 sm:px-8 lg:px-12">
-        {/* Decorative Title */}
-        <div className="mb-8 flex justify-center">
+        {/* Decorative Title - centered in its own container */}
+        <div className="mx-auto mb-10 flex max-w-[488px] justify-center rounded-lg border border-gray-200 bg-white p-6">
           <Image
             src={titleImage}
             alt={titleAlt}
-            width={500}
-            height={180}
-            className="h-auto w-auto max-w-[400px] lg:max-w-[500px]"
+            width={488}
+            height={272}
+            className="h-auto w-full max-w-[488px]"
           />
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {visibleItems.map((item, index) => (
-            <EventCard key={`${item.title}-${index}`} {...item} />
-          ))}
+        {/* Cards Grid - in bordered container */}
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {visibleItems.map((item, index) => (
+              <EventCard key={`${item.title}-${index}`} {...item} />
+            ))}
+          </div>
         </div>
 
         {/* Pagination Dots */}
         {totalPages > 1 && (
-          <div className="mt-8 flex items-center justify-center gap-2">
+          <div className="mt-6 flex items-center justify-center gap-2">
             {Array.from({ length: totalPages }, (_, page) => page).map(
               (page) => (
                 <button
@@ -55,8 +57,8 @@ export function ContentSection({
                   onClick={() => setCurrentPage(page)}
                   className={`h-2.5 w-2.5 rounded-full transition-colors ${
                     currentPage === page
-                      ? "bg-bondi-cyan"
-                      : "bg-bondi-purple/40 hover:bg-bondi-purple/60"
+                      ? "bg-[#9D1271]"
+                      : "bg-[#9D1271]/30 hover:bg-[#9D1271]/50"
                   }`}
                   aria-label={`Ir a página ${page + 1}`}
                   aria-current={currentPage === page ? "page" : undefined}

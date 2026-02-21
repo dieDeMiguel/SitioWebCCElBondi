@@ -12,7 +12,7 @@ import type { EventCardProps } from "@/components/event-card";
 const eventosData: EventCardProps[] = [
   {
     image: "/eventos/variete.jpg",
-    title: "Varieté Bajo las Estrellas",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -20,7 +20,7 @@ const eventosData: EventCardProps[] = [
   },
   {
     image: "/eventos/acrobacia.jpg",
-    title: "Noche de Acrobacia",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -28,7 +28,7 @@ const eventosData: EventCardProps[] = [
   },
   {
     image: "/eventos/musica.jpg",
-    title: "Pitu Rock en Vivo",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -36,7 +36,7 @@ const eventosData: EventCardProps[] = [
   },
   {
     image: "/eventos/suspendido.jpg",
-    title: "A la Canasta - Suspendido",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -47,7 +47,7 @@ const eventosData: EventCardProps[] = [
 const talleresData: EventCardProps[] = [
   {
     image: "/talleres/teatro.jpg",
-    title: "Taller de Teatro",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -55,7 +55,7 @@ const talleresData: EventCardProps[] = [
   },
   {
     image: "/talleres/charla.jpg",
-    title: "Charlas Comunitarias",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -63,7 +63,7 @@ const talleresData: EventCardProps[] = [
   },
   {
     image: "/talleres/boda.jpg",
-    title: "Eventos Especiales",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
@@ -71,7 +71,7 @@ const talleresData: EventCardProps[] = [
   },
   {
     image: "/talleres/variete.jpg",
-    title: "Varieté",
+    title: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
     date: "At vero eos et accusam",
